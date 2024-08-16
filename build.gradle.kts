@@ -18,11 +18,18 @@ repositories {
     mavenLocal()
 }
 
+dependencyManagement {
+    imports {
+        mavenBom("org.springframework.cloud:spring-cloud-dependencies:2023.0.3")
+    }
+}
+
 dependencies {
     implementation(libs.spring.boot.web)
     testImplementation(libs.spring.boot.test)
     implementation("org.springframework.boot:spring-boot-starter-data-jpa")
     implementation("com.h2database:h2")
+    implementation("org.springframework.cloud:spring-cloud-starter-openfeign")
 }
 
 checkstyle {

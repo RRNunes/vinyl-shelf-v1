@@ -2,11 +2,13 @@ package com.betanunes.vinylshelf;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.ApplicationContext;
 
 import java.util.Arrays;
 
 @SpringBootApplication
+@EnableFeignClients
 public class Application {
 
     public static void main(final String[] args) {
