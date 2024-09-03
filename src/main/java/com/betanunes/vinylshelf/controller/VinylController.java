@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class VinylController {
+    private static final int PAGE_SIZE = 20;
     private final DiscogsClient discogsClient;
     public VinylController(DiscogsClient discogsClient) {
         this.discogsClient = discogsClient;
@@ -16,6 +17,6 @@ public class VinylController {
     @SuppressWarnings("checkstyle:MagicNumber")
     @GetMapping("/search")
     public ObjectNode search(@RequestParam("q") String query)  {
-        return discogsClient.search(query, "master", 1, 20);
+        return discogsClient.search(query, "master", 1, PAGE_SIZE);
     }
 }
