@@ -18,7 +18,6 @@ spring:
       settings:
         trace: false
         web-allow-others: false
-  cloud:
 
     openfeign:
       client:
