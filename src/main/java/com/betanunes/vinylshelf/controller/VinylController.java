@@ -13,8 +13,9 @@ public class VinylController {
         this.discogsClient = discogsClient;
     }
 
+    @SuppressWarnings("checkstyle:MagicNumber")
     @GetMapping("/search")
     public ObjectNode search(@RequestParam("q") String query)  {
-        return discogsClient.search(query, "master");
+        return discogsClient.search(query, "master", 1, 20);
     }
 }
