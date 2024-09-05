@@ -16,6 +16,6 @@ public interface DiscogsClient {
         @RequestParam("q") String query,
         @RequestParam("type") String type,
         @RequestParam("page") int page,
-        @RequestParam("per-page") int perPage
+        @RequestParam("per_page") int perPage
     );
 }
